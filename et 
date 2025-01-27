@@ -1,0 +1,81 @@
+[33mcommit 9dabfac70c98e7011788b306d4ea4e9af29ad855[m[33m ([m[1;36mHEAD -> [m[1;32mdevlopment-janvi[m[33m)[m
+Author: unknown <jasmeen.virani@gmail.com>
+Date:   Fri Jan 5 19:06:21 2024 +0530
+
+    Revert "Revert "some changes""
+    
+    This reverts commit cce9136955e1f4b03932f2c3307ced2f731424ab.
+
+[33mcommit cce9136955e1f4b03932f2c3307ced2f731424ab[m
+Author: unknown <jasmeen.virani@gmail.com>
+Date:   Fri Jan 5 19:05:27 2024 +0530
+
+    Revert "some changes"
+    
+    This reverts commit ca3a1094d8cb17da2277888db627b245e40992cb.
+
+[33mcommit ca3a1094d8cb17da2277888db627b245e40992cb[m
+Author: unknown <jasmeen.virani@gmail.com>
+Date:   Fri Jan 5 18:59:45 2024 +0530
+
+    some changes
+
+[33mcommit b6904e0172cd41ae1d166c763be27dea93e5c40e[m
+Author: unknown <jasmeen.virani@gmail.com>
+Date:   Fri Jan 5 17:57:13 2024 +0530
+
+    make new modual
+
+[33mcommit 86cb238e440347b9e953a8ddca551731421a323d[m[33m ([m[1;31morigin/devlopment-janvi[m[33m)[m
+Author: unknown <jasmeen.virani@gmail.com>
+Date:   Thu Jan 4 17:37:18 2024 +0530
+
+    make new page design
+
+[33mcommit fff97e00d28e196a8645f50a2902e60efc51b718[m
+Author: unknown <jasmeen.virani@gmail.com>
+Date:   Thu Jan 4 15:26:14 2024 +0530
+
+    make frontend page desgin,route,controlller
+
+[33mcommit 05fd18e3683fcad944880b4bcd3d9dacd4ffdb9f[m
+Author: unknown <jasmeen.virani@gmail.com>
+Date:   Thu Jan 4 11:04:19 2024 +0530
+
+    changes,edit page make
+
+[33mcommit 5c6cf772858445668f7aa9b3bd95a870aa03f715[m
+Author: unknown <jasmeen.virani@gmail.com>
+Date:   Wed Jan 3 18:06:42 2024 +0530
+
+    make new module,changes
+
+[33mcommit 6c828e3cf46e6d60da57f5253a3ae5c5c65ae73b[m
+Author: unknown <jasmeen.virani@gmail.com>
+Date:   Wed Jan 3 16:29:58 2024 +0530
+
+    some changes on auth module
+
+[33mcommit 1144042c19b564bdce821fd88540943956cc0ffe[m
+Author: unknown <jasmeen.virani@gmail.com>
+Date:   Wed Jan 3 16:19:18 2024 +0530
+
+    some changes,desging
+
+[33mcommit 2bafae9bba42cf15807b84334ebc355ef7196ab6[m
+Author: unknown <jasmeen.virani@gmail.com>
+Date:   Tue Jan 2 17:51:43 2024 +0530
+
+    managevideo and other changes
+
+[33mcommit eb30901ec81daa48ac3fe4b388e7b816153796ab[m[33m ([m[1;31morigin/Master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mMaster[m[33m)[m
+Author: unknown <jasmeen.virani@gmail.com>
+Date:   Sat Dec 30 17:45:53 2023 +0530
+
+    frist push
+
+[33mcommit 4d9f19f2534d440ffdfe54e1fec1519ef2ced8e1[m
+Author: Jasmeen Virani <99887263+jasmeenvirani1@users.noreply.github.com>
+Date:   Sat Dec 30 16:36:01 2023 +0530
+
+    Initial commit
