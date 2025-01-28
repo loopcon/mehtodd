@@ -1,4 +1,17 @@
 @extends('frontend.partial.master')
+
+@section('page-css')
+    <style>
+        @media (max-width: 575px) {
+            .learn-more-watch-text {
+                font-size: 35px !important;
+                line-height: 35px;
+            }
+        }
+    </style>
+
+@endsection
+
 @section('content')
     <div class="">
         <div class="container custom-box-head">
