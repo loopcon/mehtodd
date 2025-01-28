@@ -26,7 +26,7 @@
         .container-professionals-box h5 {
             font-size: 1rem;
         }
-
+        
         .professinal-box img {
             max-width: 120px;
             height: 114px;
@@ -42,6 +42,17 @@
             font-size: 12px;
             color: #666;
         }
+
+        .professional-listpage-main li {
+            position: relative !important;
+            top: unset !important;
+            left: unset !important;
+        }
+
+        .professional-listpage-main ul {
+            height: auto !important;
+        }
+
     </style>
 @endsection
 
@@ -136,7 +147,7 @@
                                 <!-- professional-list.blade.php -->
                                 {{-- @dd($professionals); --}}
                                 {{-- @foreach ($professionals as $professional)
-                                    <li class="col-md-3 col-sm-6 mb-4">
+                                    <li class="col-md-3 col-sm-6 col-6 mb-4">
                                         @if (isset($professional->slug))
                                             <a href="{{ route('front.physio.bio', ['slug' => $professional->slug]) }}">
                                                 <div>
@@ -160,8 +171,8 @@
                                 @endforeach --}}
 
                                 @foreach ($professionals as $professional)
-                                    <li class="col-md-3 col-sm-6 mb-4">
-                                        @if (isset($professional->slug))
+                                    @if (isset($professional->slug))
+                                        <li class="col-md-3 col-sm-6 col-6 mb-4" style="position: relative;">
                                             <a href="{{ route('front.physio.bio', ['slug' => $professional->slug]) }}">
                                                 <div
                                                     class="professinal-box p-3 border rounded text-center shadow-sm d-flex flex-column align-items-center position-relative">
@@ -181,33 +192,12 @@
                                                                 class="fas fa-ad" style="font-size:1.5em;"></i></a>
                                                     @endif
 
-                                                    {{-- <h6 class="mt-2">{{ htmlspecialchars($professional->displayname) }}
-                                                        <span>
-                                                            @if (auth()->user())
-                                                                @if (auth()->user()->role_id == 3)
-                                                                    <a href="{{route('front.physio.bio', ['slug' => Auth::user()->slug, 'user_id' => $professional->id])}}"><i class="fa-solid fa-envelope"></i></a>
-                                                                @endif                                                        
-                                                            @endif
-                                                        </span>
-                                                    </h6> --}}
-
-                                                    <h6 class="mt-2 mb-1">
-                                                        {{ htmlspecialchars($professional->displayname) }}
+                                                    <h6 class="mt-2">{{ htmlspecialchars($professional->displayname) }}
                                                     </h6>
-
-                                                    @if (auth()->check() && auth()->user()->role_id == 3)
-                                                        <a href="{{ route('front.physio.bio', ['slug' => auth()->user()->slug, 'user_id' => $professional->id]) }}"
-                                                        class="btn btn-outline-primary btn-sm mt-2">
-                                                            <i class="fa-solid fa-envelope me-1"></i> Contact
-                                                        </a>
-                                                    @endif
-                                
-
-
                                                 </div>
                                             </a>
-                                        @endif
-                                    </li>
+                                        </li>
+                                    @endif
                                 @endforeach
 
                                 <!-- Pagination Links -->

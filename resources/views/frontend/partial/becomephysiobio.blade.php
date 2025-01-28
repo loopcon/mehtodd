@@ -427,7 +427,7 @@
 
 
 
-                            <div class="acc-followers-main">
+                            <div class="acc-followers-main flex-column flex-md-row">
                                 <p><span>{{ $follower }}</span> {{ __('messages.followers') }}</p>
                                 <p><span>{{ $profession_following_count }}</span> {{ __('messages.following') }}</p>
                                 <p><span id="like_professinal_count">{{ $like_professional_count }}</span>

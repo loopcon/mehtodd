@@ -451,7 +451,17 @@
             }
         }
 
+        @media (max-width: 767.98px) {
+            .w-100-mobile {
+                width: 100%; /* Full width only on mobile */
+            }
+        }
 
+        .navbar-sign-upbtn {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
     <link rel="canonical" href="{{ $setings->canonical_url ?? request()->url() }}">
 
@@ -1198,7 +1208,7 @@
                         <option value="0-99">0-99 miles</option>
                         <option value="100-">100+ miles</option>
                     </select>
-                    <div class="input-group-append mb-2">
+                    <div class="input-group-append mb-2 w-100-mobile">
                         <span class="input-group-text btn_search_phisio w-100 justify-content-center" id="basic-addon2"><i
                                 class="fa-solid fa-magnifying-glass"></i></span>
                     </div>
