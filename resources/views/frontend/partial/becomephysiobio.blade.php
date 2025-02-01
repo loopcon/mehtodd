@@ -465,7 +465,7 @@
                             <div class="modal-dialog  modal-dialog-centered">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h2>{{ __('messages.profile_edit') }} 111</h2>
+                                        <h2>{{ __('messages.profile_edit') }}</h2>
                                         <button data-bs-dismiss="modal"><i class="fa-regular fa-circle-xmark"
                                                 id="profileclosebtn"></i></button>
 
@@ -488,7 +488,7 @@
                                             <div class="row mt-3">
                                                 <div class="col-12 col-md-6 mb-3">
 
-                                                    {!! Form::label('category', 'Category') !!}
+                                                    {!! Form::label('category', __('messages.category')) !!}
                                                     <span class="required">*</span>
 
                                                     {!! Form::select('category', $categories, $user->user_category_id, [
@@ -499,12 +499,13 @@
                                                 </div>
                                                 <div class="col-12 col-md-6 mb-3 sub-multiple-catepopbox">
 
-                                                    {!! Form::label('subcategories', 'Sub Category') !!}
+                                                    {!! Form::label('subcategories', __('messages.sub_category')) !!}
 
                                                     {!! Form::select('subcategories[]', $sub_category_list, $user_category, [
                                                         'class' => 'selectpicker w-100',
                                                         'id' => '   ',
                                                         'multiple' => 'multiple',
+                                                        'data-none-selected-text' => __('messages.nothing_selected'),
                                                     ]) !!}
                                                     <span class="input-error text-danger font-required" role="alert">
                                                         <normal register-data-input-error="subcategories"></normal>
@@ -512,10 +513,10 @@
 
                                                 </div>
                                                 <div class="col-12 col-md-6 mb-3">
-                                                    {!! Form::label('fullname', 'Full Name') !!}
+                                                    {!! Form::label('fullname', __('messages.name')) !!}
                                                     <span class="required">*</span>
                                                     {!! Form::text('fullname', $user->fullname, [
-                                                        'placeholder' => 'Enter Full Name',
+                                                        'placeholder' => __('messages.enter_name'),
                                                         'class' => 'form-control mb-2',
                                                     ]) !!}
                                                     <span class="input-error text-danger font-required" role="alert">
@@ -523,10 +524,10 @@
                                                     </span>
                                                 </div>
                                                 <div class="col-12 col-md-6 mb-3">
-                                                    {!! Form::label('displayname', 'User Name') !!}
+                                                    {!! Form::label('displayname', __('messages.user_name')) !!}
                                                     <span class="required">*</span>
                                                     {!! Form::text('displayname', $user->displayname, [
-                                                        'placeholder' => 'Enter Display Name',
+                                                        'placeholder' => __('messages.enter_user_name'),
                                                         'class' => 'form-control mb-2',
                                                     ]) !!}
                                                     <span class="input-error text-danger font-required" role="alert">
@@ -536,18 +537,18 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-12 col-md-6 mb-3">
-                                                    {!! Form::label('email', 'Email') !!}
+                                                    {!! Form::label('email', __('messages.email')) !!}
                                                     <span class="required">*</span>
-                                                    {!! Form::email('email', $user->email, ['placeholder' => 'Enter Email', 'class' => 'form-control mb-2']) !!}
+                                                    {!! Form::email('email', $user->email, ['placeholder' => __('messages.enter_email'), 'class' => 'form-control mb-2']) !!}
                                                     <span class="input-error text-danger font-required" role="alert">
                                                         <normal register-data-input-error="email"></normal>
                                                     </span>
                                                 </div>
                                                 <div class="col-12 col-md-6 mb-3">
-                                                    {!! Form::label('mobile_number', 'Mobile Number') !!}
+                                                    {!! Form::label('mobile_number', __('messages.mobile_number')) !!}
                                                     <span class="required">*</span>
                                                     {!! Form::text('mobile_number', $user->mobile_number, [
-                                                        'placeholder' => 'Enter Mobile Number',
+                                                        'placeholder' => __('messages.enter_mobile_number'),
                                                         'class' => 'form-control mb-2',
                                                     ]) !!}
                                                     <span class="input-error text-danger font-required" role="alert">
@@ -558,10 +559,10 @@
 
                                             <div class="row">
                                                 <div class="col-12 col-md-4 mb-3">
-                                                    {!! Form::label('city', 'City') !!}
+                                                    {!! Form::label('city', __('messages.city')) !!}
                                                     <span class="required">*</span>
                                                     {!! Form::text('city', $user->city, [
-                                                        'placeholder' => 'Enter City',
+                                                        'placeholder' => __('messages.enter_city'),
                                                         'class' => 'form-control mb-2',
                                                         'id' => 'city',
                                                     ]) !!}
@@ -569,7 +570,7 @@
                                                         <normal register-data-input-error="city"></normal>
                                                     </span>
                                                 </div>
-                                                <div class="col-12 col-md-4 mb-3">
+                                                {{-- <div class="col-12 col-md-4 mb-3">
                                                     {!! Form::label('state', 'State') !!}
                                                     <span class="required">*</span>
                                                     {!! Form::text('state', $user->state, [
@@ -580,12 +581,12 @@
                                                     <span class="input-error text-danger font-required" role="alert">
                                                         <normal register-data-input-error="state"></normal>
                                                     </span>
-                                                </div>
+                                                </div> --}}
                                                 <div class="col-12 col-md-4 mb-3">
-                                                    {!! Form::label('country', 'Country') !!}
+                                                    {!! Form::label('country', __('messages.country')) !!}
                                                     <span class="required">*</span>
                                                     {!! Form::text('country', $user->country, [
-                                                        'placeholder' => 'Enter Country',
+                                                        'placeholder' => __('messages.enter_country'),
                                                         'class' => 'form-control mb-2',
                                                         'id' => 'country',
                                                     ]) !!}
@@ -598,10 +599,10 @@
 
                                             <div class="row">
                                                 <div class="col-12 col-md-6 mb-3">
-                                                    {!! Form::label('instaname', 'Instagram Name') !!}
+                                                    {!! Form::label('instaname', __('messages.instagram_name')) !!}
                                                     <span class="required">*</span>
                                                     {!! Form::text('instaname', $user->name, [
-                                                        'placeholder' => 'Enter Instagram Name',
+                                                        'placeholder' => __('messages.enter_instagram_name'),
                                                         'class' => 'form-control mb-2',
                                                     ]) !!}
                                                     <span class="input-error text-danger font-required" role="alert">
@@ -609,7 +610,7 @@
                                                     </span>
                                                 </div>
                                                 <div class="col-12 col-md-6 mb-3">
-                                                    {!! Form::label('instalink', 'Instagram Link') !!}
+                                                    {!! Form::label('instalink', __('messages.instagram_link')) !!}
                                                     <span class="required">*</span>
                                                     {!! Form::text('instalink', $user->instalink, [
                                                         'placeholder' => 'https://www.instagram.com/your_username',
@@ -622,10 +623,10 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-12 col-md-6 mb-3">
-                                                    {!! Form::label('twittername', 'Twitter Name') !!}
+                                                    {!! Form::label('twittername', __('messages.X_name')) !!}
                                                     <span class="required">*</span>
                                                     {!! Form::text('twittername', $user->twittername, [
-                                                        'placeholder' => 'Enter Twitter Name',
+                                                        'placeholder' => __('messages.enter_X_name'),
                                                         'class' => 'form-control mb-2',
                                                     ]) !!}
                                                     <span class="input-error text-danger font-required" role="alert">
@@ -633,10 +634,10 @@
                                                     </span>
                                                 </div>
                                                 <div class="col-12 col-md-6 mb-3">
-                                                    {!! Form::label('twitterlink', 'Twitter Link') !!}
+                                                    {!! Form::label('twitterlink', __('messages.X_link')) !!}
                                                     <span class="required">*</span>
                                                     {!! Form::text('twitterlink', $user->twitterlink, [
-                                                        'placeholder' => 'https://twitter.com/your_username',
+                                                        'placeholder' => 'https://x.com/your_username',
                                                         'class' => 'form-control mb-2',
                                                     ]) !!}
                                                     <span class="input-error text-danger font-required" role="alert">
@@ -646,7 +647,7 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-12 col-md-6 mb-3">
-                                                    {!! Form::label('profile_photo', 'Profile Photo') !!}
+                                                    {!! Form::label('profile_photo', __('messages.profile_photo')) !!}
                                                     {!! Form::file('profile_photo', ['class' => 'form-control mb-2', 'id' => 'profilePhotoInput']) !!}
                                                     {!! $errors->first('profile_photo', '<span class="text-danger">:message</span>') !!}
                                                 </div>
@@ -670,7 +671,7 @@
                                                         $helper = new App\Helpers\Helper();
                                                         $profile_video = $helper->IsUserAccess('profile_video');
                                                     @endphp
-                                                    {!! Form::label('profile_video', 'Slider Image / Video') !!}
+                                                    {!! Form::label('profile_video', __('messages.slider_image_video')) !!}
                                                     @if (!$profile_video)
                                                         <a href="javascript:void(0);" data-bs-target="#subscribelistModal"
                                                             data-bs-toggle="modal">{{ __('messages.upgrade_to_pro') }}</a>
@@ -695,7 +696,7 @@
                                                 </div>
 
                                                 <div class="col-12 col-md-6 mb-3">
-                                                    {!! Form::label('year_of_experience', 'Year Of Experience') !!}
+                                                    {!! Form::label('year_of_experience', __('messages.year_of_experience')) !!}
                                                     <span class="required">*</span>
                                                     @php
                                                         $yearofexperience = Getyearofexperience();
@@ -710,11 +711,12 @@
 
                                             <div class="row">
                                                 <div class="col-12 mb-3 sub-multiple-catepopbox">
-                                                    {!! Form::label('services', 'Services') !!}
+                                                    {!! Form::label('services', __('messages.services')) !!}
                                                     {!! Form::select('services[]', $services_list, $user_services, [
                                                         'class' => 'selectpicker w-100',
                                                         'id' => 'choices-multiple-remove-button',
                                                         'multiple' => 'multiple',
+                                                        'data-none-selected-text' => __('messages.nothing_selected'),
                                                     ]) !!}
                                                 </div>
 
@@ -724,10 +726,10 @@
                                             <div class="row">
 
                                                 <div class="col-12 col-md-6 mb-3">
-                                                    {!! Form::label('about_sort', 'About Me - Short') !!}
+                                                    {!! Form::label('about_sort', __('messages.about_me_short')) !!}
                                                     <span class="required">*</span>
                                                     {!! Form::textarea('about_sort', $user->about_sort, [
-                                                        'placeholder' => 'Enter AboutMe Sort',
+                                                        'placeholder' => __('messages.enter_about_me_short'),
                                                         'class' => 'form-control mb-2',
                                                         'rows' => 5,
                                                     ]) !!}
@@ -740,10 +742,10 @@
                                                     </span>
                                                 </div>
                                                 <div class="col-12 col-md-6 mb-3">
-                                                    {!! Form::label('about_long', 'About Me - Long') !!}
+                                                    {!! Form::label('about_long', __('messages.about_me_long')) !!}
                                                     <span class="required">*</span>
                                                     {!! Form::textarea('about_long', $user->about_long, [
-                                                        'placeholder' => 'Enter AboutMe Long',
+                                                        'placeholder' => __('messages.enter_about_me_long'),
                                                         'class' => 'form-control mb-2',
                                                         'rows' => 5,
                                                     ]) !!}
@@ -762,7 +764,7 @@
                                                 <div class="col-12 col-md-6 mb-3">
                                                     <div class="row m-0">
                                                         <div class="col-8 p-0">
-                                                            {!! Form::label('professionaldetalis', 'Professional Detalis') !!}
+                                                            {!! Form::label('professionaldetalis', __('messages.professional_details_label')) !!}
                                                         </div>
                                                         <div class="col-4">
                                                             <a href="javascript:void(0)" id="addProfessionalLink"
@@ -791,7 +793,7 @@
                                                 <div class="col-12 col-md-6 mb-3">
                                                     <div class="row m-0">
                                                         <div class="col-8 p-0">
-                                                            {!! Form::label('education_detalis', 'Education Detalis') !!}
+                                                            {!! Form::label('education_detalis', __('messages.education_details_label')) !!}
                                                         </div>
                                                         <div class="col-4">
                                                             <a href="javascript:void(0)" id="addEducationLink"
@@ -823,8 +825,8 @@
                                                 <div class="row mt-4">
                                                     <div class="col-md-4 offset-md-3 mx-auto my-auto">
                                                         <div class="form-group">
-                                                            <label>&nbsp;</label>
-                                                            {!! Form::submit('Update Profile', ['class' => 'profile-video-submitbtn', 'id' => 'btn_profile_update']) !!}
+                                                            {{-- <label>&nbsp;</label> --}}
+                                                            {!! Form::submit(__('messages.update_profile'), ['class' => 'btn btn-primary bg-primary-custom', 'id' => 'btn_profile_update']) !!}
                                                         </div>
                                                     </div>
                                                     <div class="alert alert-success profile_update_msg d-none mt-2">
@@ -851,10 +853,10 @@
                                             @csrf
                                             <div class="row mb-3">
                                                 <div class="col-12 mt-3">
-                                                    {!! Form::label('seo_title', 'Seo Title') !!}
+                                                    {!! Form::label('seo_title', __('messages.seo_title')) !!}
                                                     <span class="required">*</span>
                                                     {!! Form::text('seo_title', $user->seo_title, [
-                                                        'placeholder' => 'Enter Seo Title',
+                                                        'placeholder' => __('messages.enter_seo_title'),
                                                         'class' => 'form-control mb-2',
                                                     ]) !!}
                                                     <span class="input-error text-danger font-required" role="alert">
@@ -864,10 +866,10 @@
                                             </div>
                                             <div class="row mb-3">
                                                 <div class="col-12">
-                                                    {!! Form::label('meta_keyword', 'Meta Keyword') !!}
+                                                    {!! Form::label('meta_keyword', __('messages.meta_keywords')) !!}
                                                     <span class="required">*</span>
                                                     {!! Form::text('meta_keyword', $user->meta_keyword, [
-                                                        'placeholder' => 'Enter Meta Keyword',
+                                                        'placeholder' => __('messages.enter_meta_keywords'),
                                                         'class' => 'form-control mb-2',
                                                     ]) !!}
                                                     <span class="input-error text-danger font-required" role="alert">
@@ -878,10 +880,10 @@
 
                                             <div class="row mb-3">
                                                 <div class="col-12">
-                                                    {!! Form::label('meta_description', 'Meta Description') !!}
+                                                    {!! Form::label('meta_description', __('messages.meta_description')) !!}
                                                     <span class="required">*</span>
                                                     {!! Form::textarea('meta_description', $user->meta_description, [
-                                                        'placeholder' => 'Enter Meta Description',
+                                                        'placeholder' => __('messages.enter_meta_description'),
                                                         'class' => 'form-control mb-2',
                                                     ]) !!}
                                                     <span class="input-error text-danger font-required" role="alert">
@@ -934,10 +936,10 @@
                                             @csrf
                                             <div class="row mb-3">
                                                 <div class="col-12">
-                                                    {!! Form::label('videotitle', 'Video Title') !!}
+                                                    {!! Form::label('videotitle', __('messages.video_title') ) !!}
                                                     <span class="required">*</span>
                                                     {!! Form::text('title', null, [
-                                                        'placeholder' => 'Enter Video Title',
+                                                        'placeholder' => __('messages.enter_video_title'),
                                                         'class' => 'form-control mb-2',
                                                     ]) !!}
                                                     <span class="input-error text-danger font-required" role="alert">
@@ -949,7 +951,7 @@
                                                 <div class="col-12 mb-3">
                                                     <div class="profile-editmodal-cat category-border-show">
                                                         <div style="font-weight: bold !important;">
-                                                            {!! Form::label('category_id', 'Category') !!}
+                                                            {!! Form::label('category_id', __('messages.category')) !!}
                                                             <span class="required">*</span>
                                                         </div>
                                                         <a href="javascript:void(0)" class="profile-editmodal-cat-click"
@@ -1084,7 +1086,7 @@
 
                                             <div class="row">
                                                 <div class="col-12 col-md-6 mb-3 sub-multiple-catepopbox">
-                                                    {!! Form::label('difficulty', 'Difficulty') !!}
+                                                    {!! Form::label('difficulty', __('messages.difficulty')) !!}
                                                     <span class="required">*</span>
                                                     {!! Form::select('difficulty_id', $difficulty, null, [
                                                         'class' => 'selectpicker w-100 difficultyname_video',
@@ -1096,13 +1098,14 @@
                                                 </div>
 
                                                 <div class="col-12 col-md-6 mb-3 sub-multiple-catepopbox">
-                                                    {!! Form::label('tags', 'Tags') !!}
+                                                    {!! Form::label('tags', __('messages.tags')) !!}
                                                     <span class="required">*</span>
 
                                                     {!! Form::select('tags[]', $tags, null, [
                                                         'class' => 'selectpicker w-100',
                                                         'id' => 'choices-multiple-remove-button',
                                                         'multiple' => true,
+                                                        'data-none-selected-text' => __('messages.nothing_selected'),
                                                     ]) !!}
 
                                                     <span class="input-error text-danger font-required" role="alert">
@@ -1120,6 +1123,7 @@
                                                         'class' => 'selectpicker w-100',
                                                         'id' => 'choices-multiple-remove-button',
                                                         'multiple' => true,
+                                                        'data-none-selected-text' => __('messages.nothing_selected'),
                                                     ]) !!}
 
                                                     <span class="input-error text-danger font-required" role="alert">
@@ -1130,10 +1134,10 @@
 
                                             <div class="row mb-3">
                                                 <div class="col-12">
-                                                    {!! Form::label('description', ' Description') !!}
+                                                    {!! Form::label('description', 'Description') !!}
                                                     <span class="required">*</span>
                                                     {!! Form::textarea('description', null, [
-                                                        'placeholder' => 'Enter  Description',
+                                                        'placeholder' => __('messages.enter_description'),
                                                         'class' => 'form-control mb-2',
                                                     ]) !!}
                                                 </div>
@@ -1147,7 +1151,7 @@
                                                     <div class="pl-4">
 
                                                         {!! Form::checkbox('is_private', 1, false, ['class' => 'form-check-input ', 'id' => 'isPrivateCheckbox']) !!}
-                                                        {!! Form::label('isPrivateCheckbox', 'Is Video Private ?', ['class' => 'form-check-label ml-1']) !!}
+                                                        {!! Form::label('isPrivateCheckbox', __('messages.is_video_private'), ['class' => 'form-check-label ml-1']) !!}
                                                     </div>
                                                 </div>
 
@@ -1192,7 +1196,7 @@
 
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    {!! Form::label('thumbnail', 'Video Thumbnail') !!}
+                                                    {!! Form::label('thumbnail', __('messages.video')) !!}
                                                     {!! Form::file('thumbnail', [
                                                         'class' => 'form-control mb-2',
                                                         'id' => 'addVideoThumbnail',
@@ -1215,7 +1219,7 @@
 
                                             <div class="row">
                                                 <div class="col-12 col-md-6">
-                                                    {!! Form::label('video', 'Video') !!}
+                                                    {!! Form::label('video',  __('messages.video')) !!}
                                                     <span class="required">*</span>
 
                                                     {!! Form::file('video', ['class' => 'form-control mb-2', 'accept' => 'video/*', 'id' => 'video']) !!}
@@ -1236,7 +1240,7 @@
                                                         <div class="form-group">
                                                             <label>&nbsp;</label>
 
-                                                            {!! Form::submit('Add Video', ['class' => 'profile-video-submitbtn', 'id' => 'addVideoBtn']) !!}
+                                                            {!! Form::submit(__('messages.add_video'), ['class' => 'profile-video-submitbtn', 'id' => 'addVideoBtn']) !!}
                                                             {{-- @if ($helper->IsUserAccess('video'))
                                                             @else
                                                                 {!! Form::button('Add Video', [
@@ -4617,13 +4621,13 @@
 
         function updateDisplayedCategories(dropdown_class, label_id) {
             var checkedCategories = [];
-            var old_html = 'Nothing selected';
+            var old_html = 'Rien de sélectionné';
 
             $('.' + dropdown_class + ' input[type="checkbox"]:checked').each(function() {
                 checkedCategories.push($(this).next('label').text().trim());
             });
             if (checkedCategories.length === 0) {
-                $('#' + label_id).html('Nothing selected');
+                $('#' + label_id).html('Rien de sélectionné');
             } else {
                 var categorytext = checkedCategories.join(', ');
                 $('#' + label_id).html(categorytext);

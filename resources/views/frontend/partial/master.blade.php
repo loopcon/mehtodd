@@ -1655,7 +1655,18 @@
                     <div class="row m-0">
                         <div class="col-12 col-md-5 p-0">
                             <img class="img-fluid login-img-popup"
-                                src="{{ asset('frontend/img/our-clients-img.png') }}" alt="">
+                                src="{{ asset('uploads/profilephoto/1738390325_physio-coach-img.webp') }}" alt="" style="border-radius: var(--bs-modal-border-radius) 0 0 var(--bs-modal-border-radius);">
+
+                            {{-- <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="{{ asset('frontend/img/slider-img1.png') }}" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="{{ asset('frontend/img/slider-img2.png') }}" class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                            </div> --}}
                         </div>
 
                         <div class="col-12 col-md-7 p-0">
@@ -1732,7 +1743,7 @@
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="basic-addon1"><i
                                                     class="fa-solid fa-user-plus"></i></span>
-                                            <input type="text" class="form-control" placeholder="EMAIL"
+                                            <input type="text" class="form-control" placeholder="{{ __('messages.email') }}"
                                                 name="email" id="email" aria-label="email"
                                                 aria-describedby="basic-addon1"
                                                 value="{{ old('email') ?: Cookie::get('email') }}">
@@ -1746,10 +1757,13 @@
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="basic-addon2"><i
                                                     class="fa-solid fa-key"></i></span>
-                                            <input type="password" class="form-control" placeholder="PASSWORD"
+                                            <input type="password" class="form-control" placeholder="{{ __('messages.password') }}"
                                                 name="password" id="password" aria-label="Password"
                                                 aria-describedby="basic-addon2"
                                                 value="{{ old('password') ?: Cookie::get('password') }}">
+                                            <span class="input-group-text" onclick="togglePassword()" style="cursor: pointer;">
+                                                <i class="fa-solid fa-eye" id="togglePasswordIcon"></i>
+                                            </span>
                                         </div>
                                         <div style="margin-bottom: 20px">
                                             <span class="input-error text-danger font-required" role="alert">
@@ -1863,7 +1877,7 @@
                                                     <span class="input-group-text" id="basic-addon1"><i
                                                             class="fa-regular fa-user"></i></span>
                                                     <input type="text" class="form-control" name="fullname"
-                                                        id="fullname" placeholder="Full Name" aria-label="Username"
+                                                        id="fullname" placeholder="{{__('messages.name')}}" aria-label="Username"
                                                         aria-describedby="basic-addon1">
                                                 </div>
                                                 <div>
@@ -1879,7 +1893,7 @@
                                                     <span class="input-group-text" id="basic-addon1"><i
                                                             class="fa-regular fa-user"></i></span>
                                                     <input type="text" class="form-control" name="displayname"
-                                                        id="displayname" placeholder="User Name"
+                                                        id="displayname" placeholder="{{ __('messages.user_name') }}"
                                                         aria-label="Username" aria-describedby="basic-addon1">
                                                 </div>
 
@@ -1896,7 +1910,7 @@
                                         <div class="input-group mb-0">
                                             <span class="input-group-text" id="basic-addon1"><i
                                                     class="fa-solid fa-at"></i></span>
-                                            <input type="email" class="form-control" placeholder="EMAIL"
+                                            <input type="email" class="form-control" placeholder="{{ __('messages.email') }}"
                                                 name="email" id="email" aria-label="Username"
                                                 aria-describedby="basic-addon1">
                                         </div>
@@ -1911,9 +1925,12 @@
                                         <div class="input-group mb-0">
                                             <span class="input-group-text" id="basic-addon1"><i
                                                     class="fa-solid fa-key"></i></span>
-                                            <input type="password" class="form-control" placeholder="PASSWORD"
-                                                name="password" id="password" aria-label="Username"
+                                            <input type="password" class="form-control" placeholder="{{ __('messages.password') }}"
+                                                name="password" id="password2" aria-label="Username"
                                                 aria-describedby="basic-addon1">
+                                            <span class="input-group-text" onclick="togglePassword('password2')" style="cursor: pointer;">
+                                                <i class="fa-solid fa-eye" id="togglePasswordIcon"></i>
+                                            </span>
                                         </div>
                                         <div style="margin-bottom: 20px">
                                             <span class="input-error text-danger font-required" role="alert">
@@ -1927,9 +1944,12 @@
                                             <span class="input-group-text" id="basic-addon1"><i
                                                     class="fa-solid fa-key"></i></span>
                                             <input type="password" class="form-control"
-                                                placeholder="CONFIRM PASSWORD" aria-label="Username"
+                                                placeholder="{{ __('messages.confirm_password') }}" aria-label="Username"
                                                 name="password_confirmation" id="password_confirmation"
                                                 aria-describedby="basic-addon1">
+                                            <span class="input-group-text" onclick="togglePassword('password_confirmation')" style="cursor: pointer;">
+                                                <i class="fa-solid fa-eye" id="togglePasswordIcon"></i>
+                                            </span>
                                         </div>
                                         <div style="margin-bottom: 20px">
                                             <span class="input-error text-danger font-required" role="alert">
@@ -2045,7 +2065,7 @@
                     <div class="row m-0">
                         <div class="col-5 p-0">
                             <img class="img-fluid login-img-popup"
-                                src="{{ asset('frontend/img/our-clients-img.png') }}" alt="">
+                                src="{{ asset('uploads/profilephoto/1738390325_physio-coach-img.webp') }}" alt="">
                         </div>
 
                         <div class="col-7 p-0">
@@ -2428,6 +2448,20 @@
             let currentLang = '{{ session('locale') }}';
             let newLang = currentLang === 'en' ? 'fr' : 'en';
             window.location.href = base_url + '/public/lang/' + newLang;
+        }
+
+        function togglePassword(fieldId = 'password') {
+            var field = document.getElementById(fieldId);
+            var icon = document.getElementById('togglePasswordIcon');
+            if (field.type === "password") {
+                field.type = "text";
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                field.type = "password";
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
         }
     </script>
 
