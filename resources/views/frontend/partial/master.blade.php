@@ -1928,8 +1928,8 @@
                                             <input type="password" class="form-control" placeholder="{{ __('messages.password') }}"
                                                 name="password" id="password2" aria-label="Username"
                                                 aria-describedby="basic-addon1">
-                                            <span class="input-group-text" onclick="togglePassword('password2')" style="cursor: pointer;">
-                                                <i class="fa-solid fa-eye" id="togglePasswordIcon"></i>
+                                            <span class="input-group-text" onclick="togglePassword('password2', 'togglePasswordIcon2')" style="cursor: pointer;">
+                                                <i class="fa-solid fa-eye" id="togglePasswordIcon2"></i>
                                             </span>
                                         </div>
                                         <div style="margin-bottom: 20px">
@@ -1947,8 +1947,8 @@
                                                 placeholder="{{ __('messages.confirm_password') }}" aria-label="Username"
                                                 name="password_confirmation" id="password_confirmation"
                                                 aria-describedby="basic-addon1">
-                                            <span class="input-group-text" onclick="togglePassword('password_confirmation')" style="cursor: pointer;">
-                                                <i class="fa-solid fa-eye" id="togglePasswordIcon"></i>
+                                            <span class="input-group-text" onclick="togglePassword('password_confirmation', 'togglePasswordIcon3')" style="cursor: pointer;">
+                                                <i class="fa-solid fa-eye" id="togglePasswordIcon3"></i>
                                             </span>
                                         </div>
                                         <div style="margin-bottom: 20px">
@@ -2450,9 +2450,9 @@
             window.location.href = base_url + '/public/lang/' + newLang;
         }
 
-        function togglePassword(fieldId = 'password') {
+        function togglePassword(fieldId = 'password', iconId = 'togglePasswordIcon') {
             var field = document.getElementById(fieldId);
-            var icon = document.getElementById('togglePasswordIcon');
+            var icon = document.getElementById(iconId);
             if (field.type === "password") {
                 field.type = "text";
                 icon.classList.remove('fa-eye');
